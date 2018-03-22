@@ -30,6 +30,5 @@ dependencies {
     compile group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
 
     runtime('mysql:mysql-connector-java')
-    compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

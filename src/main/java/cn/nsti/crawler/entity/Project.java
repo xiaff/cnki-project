@@ -1,8 +1,5 @@
 package cn.nsti.crawler.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -13,9 +10,6 @@ import java.util.Date;
  * Project info from CNKI
  * Created by Lu Chenwei on 2017/7/30.
  */
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "cnki_project")
 public class Project {
@@ -63,4 +57,155 @@ public class Project {
     @Temporal(TemporalType.TIMESTAMP)
     @UpdateTimestamp
     private Date updateTime;
+
+    public Project() {
+    }
+
+    public Project(String title, String number, String leaders, String organizations, String fund, String source, String startYear, String endYear, String subject, String keyword, String url, Date createTime, Date updateTime) {
+        this.title = title;
+        this.number = number;
+        this.leaders = leaders;
+        this.organizations = organizations;
+        this.fund = fund;
+        this.source = source;
+        this.startYear = startYear;
+        this.endYear = endYear;
+        this.subject = subject;
+        this.keyword = keyword;
+        this.url = url;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getLeaders() {
+        return leaders;
+    }
+
+    public void setLeaders(String leaders) {
+        this.leaders = leaders;
+    }
+
+    public String getOrganizations() {
+        return organizations;
+    }
+
+    public void setOrganizations(String organizations) {
+        this.organizations = organizations;
+    }
+
+    public String getFund() {
+        return fund;
+    }
+
+    public void setFund(String fund) {
+        this.fund = fund;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getStartYear() {
+        return startYear;
+    }
+
+    public void setStartYear(String startYear) {
+        this.startYear = startYear;
+    }
+
+    public String getEndYear() {
+        return endYear;
+    }
+
+    public void setEndYear(String endYear) {
+        this.endYear = endYear;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", number='" + number + '\'' +
+                ", leaders='" + leaders + '\'' +
+                ", organizations='" + organizations + '\'' +
+                ", fund='" + fund + '\'' +
+                ", source='" + source + '\'' +
+                ", startYear='" + startYear + '\'' +
+                ", endYear='" + endYear + '\'' +
+                ", subject='" + subject + '\'' +
+                ", keyword='" + keyword + '\'' +
+                ", url='" + url + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }
